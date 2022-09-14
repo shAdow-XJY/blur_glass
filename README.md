@@ -2,7 +2,16 @@
 
 ![Blur Glass - Google Chrome.png](https://github.com/shAdow-XJY/blur_glass/blob/master/example/assets/BlurGlass-GoogleChrome.png)
 
+## pub
+
+[https://pub.dev/packages/blur_glass](https://pub.dev/packages/blur_glass)
+
 ## use
+
+```
+dependencies:
+    blur_glass: ^0.0.1
+```
 
 ```aidl
 BlurGlass(
