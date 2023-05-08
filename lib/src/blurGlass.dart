@@ -1,19 +1,21 @@
+// ignore_for_file: file_names
+
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class BlurGlass extends StatefulWidget {
-  Widget child;
-  double marginValue;
-  double paddingValue;
-  Color? color;
-  double outBorderRadius;
-  double inBorderRadius;
-  double filterX;
-  double filterY;
-  BlurGlass({Key? key,
+  final Widget child;
+  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? padding;
+  final Color? color;
+  final double outBorderRadius;
+  final double inBorderRadius;
+  final double filterX;
+  final double filterY;
+  const BlurGlass({Key? key,
              required this.child,
-             this.marginValue = 20.0,
-             this.paddingValue = 20.0,
+             this.margin,
+             this.padding,
              this.color,
              this.outBorderRadius = 20.0,
              this.inBorderRadius = 30.0,
@@ -35,8 +37,8 @@ class _BlurGlassState extends State<BlurGlass> {
         filter: ImageFilter.blur(sigmaX: widget.filterX, sigmaY: widget.filterY),
         //图片模糊过滤，横向竖向都设置5.0
         child: Container(
-          margin: EdgeInsets.all(widget.marginValue),
-          padding: EdgeInsets.all(widget.paddingValue),
+          margin: widget.margin,//EdgeInsets.all(widget.marginValue),
+          padding: widget.padding,//EdgeInsets.all(widget.paddingValue),
           decoration: BoxDecoration(
             color: widget.color??Colors.transparent.withOpacity(0.2),
             borderRadius: BorderRadius.circular(widget.inBorderRadius),

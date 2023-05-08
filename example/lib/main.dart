@@ -94,8 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     BlurGlass(
-                        marginValue: 5.0,
-                        paddingValue: 5.0,
+                        margin: EdgeInsets.all(5.0),
+                        padding: EdgeInsets.all(5.0),
                         child: Row(
                           children: [
                             _IconButton('assets/github.png',

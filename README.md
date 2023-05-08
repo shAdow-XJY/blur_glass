@@ -10,21 +10,21 @@
 
 ```
 dependencies:
-    blur_glass: ^0.0.1
+    blur_glass: ^lastest_version
 ```
 
-```aidl
-BlurGlass(
-                        marginValue: 5.0,
-                        paddingValue: 5.0,
-                        child: Row(
-                          children: [
-                            Icon(Icons.star),
-                            Icon(Icons.list),
-                            Icon(Icons.zoom_in),
-                          ],
-                        )
-                    )
+```
+    BlurGlass(
+        margin: EdgeInsets.all(5.0),
+        padding: EdgeInsets.all(5.0),
+        child: Row(
+                children: [
+                    Icon(Icons.star),
+                    Icon(Icons.list),
+                    Icon(Icons.zoom_in),
+                ],
+            )
+    )
 ```
 
 ## Function creator
@@ -32,8 +32,8 @@ BlurGlass(
 ```
   BlurGlass({Key? key,
              required this.child,
-             this.marginValue = 20.0,
-             this.paddingValue = 20.0,
+             this.margin,
+             this.padding,
              this.color,
              this.outBorderRadius = 20.0, //
              this.inBorderRadius = 30.0,  //
